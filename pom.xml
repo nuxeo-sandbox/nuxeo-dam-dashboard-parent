@@ -3,14 +3,19 @@
   <parent>
     <groupId>org.nuxeo.ecm.distribution</groupId>
     <artifactId>nuxeo-distribution</artifactId>
-    <version>8.1-SNAPSHOT</version>
+    <version>8.10</version>
   </parent>
 
-  <groupId>org.nuxeo.sample</groupId>
+  <groupId>org.nuxeo.dam.dashboard</groupId>
   <artifactId>parent-dam-dashboard</artifactId>
   <packaging>pom</packaging>
-  <version>1.0.5-SNAPSHOT</version>
+  <version>8.10-SNAPSHOT</version>
   <name>Parent project of DAM Dashboard sample</name>
+
+  <properties>
+    <nuxeo.dam.dashboard.version>8.10-SNAPSHOT</nuxeo.dam.dashboard.version>
+    <nuxeo.distribution.version>8.10</nuxeo.distribution.version>
+  </properties>
 
   <modules>
     <module>nuxeo-dam-dashboard</module>
@@ -20,15 +25,14 @@
   <dependencyManagement>
     <dependencies>
       <dependency>
-        <groupId>org.nuxeo.sample</groupId>
+        <groupId>org.nuxeo.dam.dashboard</groupId>
         <artifactId>nuxeo-dam-dashboard</artifactId>
-        <version>${project.version}</version>
+        <version>${nuxeo.dam.dashboard.version}</version>
       </dependency>
       <dependency>
-        <groupId>org.nuxeo.sample</groupId>
+        <groupId>org.nuxeo.dam.dashboard</groupId>
         <artifactId>nuxeo-dam-dashboard-np</artifactId>
-        <version>${project.version}</version>
-        <type>zip</type>
+        <version>${nuxeo.dam.dashboard.version}</version>
       </dependency>
     </dependencies>
   </dependencyManagement>
